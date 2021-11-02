@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .t1{
+            position: absolute;
+            border-radius: 5px;
+            font-size: 20px;
+            top:40%;
+            left:50%;
+            width:130px;
+            height:50px;
+            box-shadow: 5px 5px 5px rgba(93,93,93,0.5);
+            color:rgb(22, 21, 21);
+            background-color:rgb(158, 85, 226);
+            border: none;
+
+        }
+        .t1:active{
+            position: absolute;
+            border-radius: 5px;
+            font-size: 20px;
+            top:40%;
+            left:50%;
+            width:130px;
+            height:50px;
+            box-shadow:0 5px 5px rgba(161, 159, 159,0.5);
+            color:rgb(22, 21, 21) ;
+            background-color: rgb(158, 85, 226);
+            transform: translateY(5px);
+
+        } */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page{
+            position: absolute;
+            background-color: rgba(0,0,0,0.7);
+            background-image: url("wp2469307-4k-wallpapers.jpg");
+            width:100%;
+            height: 100%;
+            animation-name: am1;
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+        @keyframes am1 {
+            from{background-color: rgba(0,0,0,1);
+            }
+            to {background-color: rgba(0,0,0,0);
+            }
+        }
+
+        .box{
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height:100%;
+            background-color:rgba(0,0,0,1);
+            animation-name: am1;
+            animation-duration: 5s;
+            animation-delay: 2s;
+
+        }
+        
+    </style>
+</head>
+<body >
+    <!-- <button class="t1">Click Here</button> -->
+    <div class="page">
+    </div>
+    <div class="box">
+     
+    </div>
+</body>
+</html>
