@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+       <label for="" >First Name</label>
+       <input type="Text" id="FirstName"><br>
+       <br>
+       <label for="" >Last Name</label>
+       <input type="Text"id="lastName" ><br>
+       <br>
+       <label for="" >Marks</label>
+       <input type="Text"id="marks" ><br>
+       <br>
+       
+       <p id="name"></p>
+       <script>
+           function information(){
+            var first = document.getElementById("FirstName").value;
+            var last = document.getElementById("lastName").value;
+            var nmarks = document.getElementById("marks").value;
+            
+            if(final_marks > 80){
+                document.getElementById("name").innerHTML="Welcome" + " " + first + " " + last + " You scored A grade";
+            }
+            else if (final_marks < 80){
+                document.getElementById("name").innerHTML="Welcome" + " " + first + " " + last + " You scored B grade";
+            }
+            else {
+                document.getElementById("name").innerHTML="Welcome" + " " + first + " " + last + " You scored C grade";
+            }
+        }
+
+       </script>
+       
+
+    
+</body>
+</html>

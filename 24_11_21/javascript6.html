@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            background-color: gray;
+        }
+
+        .clock{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 280px;
+        }
+
+        .table1{
+            width: 60%;
+            height: 50px;
+            table-layout: fixed;
+            text-align: center;
+        }
+
+        .table2{    
+            width: 60%;
+            table-layout: fixed;
+            height: 50px;
+            text-align: center;
+        }
+        
+        #hour{
+            background-color: red;
+        }
+
+        #minute{
+            background-color: orange;
+        }
+
+        #second{
+            background-color:yellow;
+        }
+
+    </style>
+    <script>
+        var counter = 0;
+        var seconds = 0, minutes = 0, hours = 0;
+
+        function print(){
+            counter += 1;
+            seconds = counter;
+            if(seconds === 60)
+            {
+                minutes++;
+                seconds = 0;
+                counter = 0;
+            }
+            if(minutes === 60)
+            {
+                counter = 0;    
+                seconds = 0;
+                minutes = 0;
+                hours++;
+            }
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("second").innerHTML = seconds;
+        }
+    </script>
+</head>
+
+<body>
+    <div class = "clock">
+    <table class = "table1" cellspacing = 0> 
+        <tr>
+            <td id="hour">
+                0 
+            </td>
+            <td id="minute">
+                0
+            </td>
+            <td id="second">
+                0
+            </td>
+        </tr>
+    </table>
+    <table class = "table2" cellspacing = 0>
+        <tr>
+            <td>HH</td>
+            <td>MM</td>
+            <td>SS</td>
+        </tr>
+    </table>
+    </div>
+    <script>
+
+        
+
+       setInterval(print, 1000);
+       
+    </script>
+    <script>
+       
+    </script>
+</body>
+</html>

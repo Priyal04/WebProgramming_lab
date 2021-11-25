@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #text{
+            font-size: 100px;
+            color: rgb(0, 238, 255);
+            margin-top: 200px;
+            margin-left: 700px;
+        }
+        #button1{
+            margin-left: 700px;
+        }
+        #button2{
+            margin-left: 50px;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+
+    <p id="text">00
+    </p>
+    <button id = "button1" onclick="start()">START</button>
+   <button id = "button2" onclick="end()"> STOP
+    </button>
+   <script>
+       var counter = 0;
+       function hello(){
+           counter++;
+           document.getElementById("text").innerHTML = counter;
+       }
+
+       var clock;
+
+       function start(){
+            clock = setInterval(hello, 1000);
+       }
+
+       function end(){
+           clearInterval(clock);
+       }
+   </script>
+</body>
+</html>

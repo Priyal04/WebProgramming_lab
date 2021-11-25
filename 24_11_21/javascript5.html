@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first {
+            -ms-flex-item-align: center;
+            font-size: 300px;
+            color: blue;
+        }
+    </style>
+    <script>
+        var a =0;
+        function count(){
+            a=a+1;
+            document.getElementById("one").innerHTML=a;
+           
+        }
+        </script>
+</head>
+<body>
+    
+        <p id = "one" align="center">0
+        </p>
+        <script>
+        setInterval(count,1000);
+    </script>
+    
+</body>
+</html>

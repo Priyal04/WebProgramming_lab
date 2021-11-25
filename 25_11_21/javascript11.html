@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+     <label for="" >Email</label>
+       <input type="email" id="user_text" placeholder="abc@gmail.com"><br>
+       <br>
+       <label for="" >Password</label>
+       <input type="Password"id="password1" placeholder="Password"><br>
+       <br>
+       <label for="" >Re-Enter Password</label>
+       <input type="Password"id="password2" placeholder="Password"><br>
+       <br>
+       <button onclick="checkEmail()">Submit</button>
+       <p id = "print"></p>
+       <!-- <script>
+        function check(){
+            var eID = document.getElementById("email").value;
+            var Pswd1 = document.getElementById("password1").value;
+            var Pswd2 = document.getElementById("password2").value;
+            if(Pswd1 == Pswd2){
+                document.getElementById("name").innerHTML="Password is Correct";
+            }
+            else{
+                document.getElementById("name").innerHTML="Password is InCorrect";
+            }
+        }
+        <p id = "print"></p>
+    </script> -->
+
+    <script>
+        var counterspecial = 0;
+
+        var checkemail = true;
+
+        var validpassword = true;
+
+        function invalidemail()
+        {
+            document.getElementById("print").innerHTML = "PLEASE ENTER A VALID EMAIL";
+        }
+
+        function invalidpassword()
+        {
+            document.getElementById("print").innerHTML = "PASSWORD DOES NOT MATCH. PLEASE TRY AGAIN.";
+        }
+
+        function valid()
+        {
+            document.getElementById("print").innerHTML = "WELCOME";
+        }
+
+        function invalidemailandPassword()
+        {
+            document.getElementById("print").innerHTML = "INCORRECT EMAIL AND PASSWORD";
+        }
+
+        function checkspecial(email, len){
+            for(var i = 0; i < len; i++)
+            {
+                if(email.charAt(i) === '@')
+                    counterspecial++;
+            }
+
+
+            if(!counterspecial || counterspecial > 1)
+                checkemail = false;
+        }
+
+        function checkpassword(Password1, plen, Password2, rplen)
+        {
+            if(plen !== rplen){
+                validpassword = false;
+            }
+            else{
+                for(var i = 0; i < plen; i++)
+                {
+                    if(Password1.charAt(i) !== Password2.charAt(i))
+                    {
+                        validpassword = false;
+                    }
+                }
+            }
+        }
+
+        function checkEmail(){
+            checkemail = true;
+            validpassword = true;
+            counterspecial = 0; 
+
+            var email = document.getElementById("user_text").value;
+            var len = email.length;
+            var Password1 = document.getElementById("password1").value;
+            var plen = Password1.length;
+            var Password2 = document.getElementById("password2").value;
+            var rplen = Password2.length;
+            
+            checkspecial(email, len);
+            checkpassword(Password1, plen, Password2, rplen);
+
+            if(!validpassword && !checkemail)
+                invalidemailandPassword();
+            else if(!validpassword)
+                invalidpassword();
+            else if(!checkemail)
+                invalidemail();
+            else    
+                valid();
+        }
+
+
+    </script>
+</body>
+</html>
